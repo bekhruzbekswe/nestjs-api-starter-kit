@@ -1,0 +1,62 @@
+{
+  "$schema": "https://biomejs.dev/schemas/2.2.7/schema.json",
+  "vcs": {
+    "enabled": true,
+    "clientKind": "git",
+    "useIgnoreFile": true
+  },
+  "files": {
+    "ignoreUnknown": false
+  },
+  "formatter": {
+    "enabled": true,
+    "indentStyle": "space",
+    "lineWidth": 100
+  },
+  "linter": {
+    "enabled": true,
+    "rules": {
+      "recommended": true,
+      "suspicious": {
+        "noConstEnum": "off"
+      }
+    }
+  },
+  "javascript": {
+    "formatter": {
+      "quoteStyle": "single"
+    },
+    "parser": {
+      "unsafeParameterDecoratorsEnabled": true
+    }
+  },
+  "assist": {
+    "enabled": true,
+    "actions": {
+      "source": {
+        "organizeImports": "on"
+      }
+    }
+  },
+  "overrides": [
+    {
+      "includes": [
+        "src/**/*.service.ts",
+        "src/**/*.controller.ts",
+        "src/**/*.guard.ts",
+        "src/**/*.interceptor.ts",
+        "src/**/*.strategy.ts",
+        "src/**/*.middleware.ts",
+        "src/**/*.gateway.ts",
+        "src/**/*.filter.ts"
+      ],
+      "linter": {
+        "rules": {
+          "style": {
+            "useImportType": "off"
+          }
+        }
+      }
+    }
+  ]
+}
